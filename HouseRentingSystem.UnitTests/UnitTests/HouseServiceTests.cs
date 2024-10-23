@@ -94,7 +94,7 @@ namespace HouseRentingSystem.Tests.UnitTests
             // Assert the returned houses' count is correct
             var housesInDb = this.data.Houses
                 .Where(h => h.RenterId == renterId);
-            Assert.That(result.Count(), Is.EqualTo(10));
+            Assert.That(result.Count(), Is.EqualTo(housesInDb.Count()));
         }
 
         [Test]
